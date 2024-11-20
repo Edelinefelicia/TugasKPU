@@ -30,7 +30,6 @@ class LihatData : AppCompatActivity() {
         executorService = Executors.newSingleThreadExecutor()
         val db = NoteRoomDatabase.getDatabase(this)
         mNotesDao = db!!.noteDao()!!
-//        val db = NoteRoomDatabase.getDatabase(this@Edit)?.noteDao()!!
         noteId = intent.getIntExtra("note_id", 0)
 
         loadPemilihData()
