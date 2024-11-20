@@ -40,6 +40,8 @@ class LihatData : AppCompatActivity() {
         }
 
     }
+
+
     private fun loadPemilihData() {
         lifecycleScope.launch (Dispatchers.IO) {
             mNotesDao.getVoterById(noteId).collect { pemilih ->
